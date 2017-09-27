@@ -1,0 +1,15 @@
+{
+	"type": "mashup",
+	"name": "RealtimeMashup",
+	"description": "Mashup to illustrate Lambda with Qlik / Kafka",
+	"homepage": "",
+	"author": "",
+	"version": "1.0.0",
+	"preview": "preview.png",
+	"keywords": "qlik-sense, mashup",
+	"license": "",
+	"repository": "",
+	"dependencies": {
+		"qlik-sense": ">=1.0.x"
+	}
+}
