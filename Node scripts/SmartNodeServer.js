@@ -49,7 +49,7 @@ if (messagebroker === 'kafka') {  // Start Messagebroker check
     io.on('connection', function(socket){ //have to bounce to ext for now
         socket.on('sensoremit', function(data, callback) {
             socket.broadcast.emit('bounceemit',data);
-            console.log('got data from socket.io')
+            console.log('got data from kafka consumer')
         })
     })
 
