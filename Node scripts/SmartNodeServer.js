@@ -39,7 +39,7 @@ var column={};
 var lastAggReadId_preload=0;
 var unique_readid;
 var sendData=1;
-var messagebroker = 'socket.io'; //or 'socket.io'
+var messagebroker = 'socket.io'; //or 'kafka'
 var kafka_ip='153.92.35.73';
 var kafka_port='2181';
 var kafka_topic='iot3';
