@@ -1,0 +1,9 @@
+{
+	"name" : "Realtime",
+	"description" : "Sense Realtime Extension using Socket.io",
+	"icon" : "table",
+	"type" : "visualization",
+	"version": "1.0",
+	"preview" : "table",
+	"author": "Chris Larsen, Qlik"
+}

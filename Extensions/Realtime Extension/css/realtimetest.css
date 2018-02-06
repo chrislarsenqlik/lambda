@@ -1,0 +1,24 @@
+.qv-object-realtimetest .graph .axis {
+    stroke-width: 1;
+}
+
+.qv-object-realtimetest .graph .axis .tick line {
+    stroke: black;
+    stroke-width: 4;
+}
+
+.qv-object-realtimetest .graph .axis .tick text {
+    fill: black;
+    font-size: 2em;
+}
+
+.qv-object-realtimetest .graph .axis .domain {
+    fill: none;
+    stroke: black;
+}
+
+.qv-object-realtimetest .graph .group {
+    fill: none;
+    stroke: black;
+    stroke-width: 1.5;
+}
