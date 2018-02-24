@@ -13,7 +13,7 @@ require.config({
 var paintcount=0;
 var maxHeight=10;
 
-define(["jquery", "socketio", "qlik", "css!./css/realtime.css", "./js/d3.min","./js/plotly-latest.min"], function($, io, qlik, cssContent, d3, Plotly) {
+define(["jquery", "socketio", "qlik", "css!./css/realtimetest.css", "./js/d3.min","./js/plotly-latest.min"], function($, io, qlik, cssContent, d3, Plotly) {
     $("<style>").html(cssContent).appendTo("head");
     return {
         initialProperties: {
