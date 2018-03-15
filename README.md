@@ -1,15 +1,13 @@
-# Lambda Architecture using Qlik QIX Engine API
+# Lambda Architecture using Qlik Sense Engine API
 
 # System pre-requisites / suggestions:
-This prototype has been tested with June 2017 release of Qlik Sense Desktop
+This prototype has been tested with February 2018 release of Qlik Sense (Desktop). 
 
-Don't have the apps active and open while using the mashup, the sessions can step on each other, this is more a problem in desktop as engine api sessions are not authenticated/by user
-
-This more simplistic example does not connect to Kafka, looking at the SmartNodeServer.js code you can see that it has the capability if turned on
+This pure Node, socket.io, example does not connect to Kafka, change config parameter in the server js to connect to 'kafka' if you have a consumer/producer you want to connect to.
 
 Browser refresh may be necessary to reestablish engine api session from time to time. I think I know what can be done to fix this but not 100% sure.
 
-This was built using qSocks javascript wrapper for the QIX Engine API. Enigma.js is the newer release put out specifically by Qlik. It is on my list of todos to convert to Enigma.
+This was built using *qSocks* javascript wrapper for the QIX Engine API. Enigma.js is the newer release put out specifically by Qlik. It is on my list of todos to convert to Enigma. Coming soon!!
 
 # Realtime Lambda implementation Deployment Instructions:
 1. Move the apps in the Apps folder to Qlik Sense Apps folder
@@ -23,3 +21,4 @@ This was built using qSocks javascript wrapper for the QIX Engine API. Enigma.js
 2. Start Qlik Sense Desktop and login to get to the hub
 3. Open web browser and open the mashup: http://localhost:4848/extensions/RealtimeNew/RealtimeNew.html
 4. Start the data generation bot by running "node SensorClient" in the same folder in a cmd prompt
+5. If you ctrl+c on the sensorcllient.js and then start it back up, it will currently start over at 0 again when starting up again. Will be implementing persistence soon... 
