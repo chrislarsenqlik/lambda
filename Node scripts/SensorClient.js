@@ -2,7 +2,6 @@ var ioclient = require('socket.io-client')('http://localhost:33333');
 var uniqueRandomArray=require('random-item');
 const Promise = require('bluebird');
 const qsocks = require('qsocks');
-var request=require('request');
 var intervalGenSecs=.5;
 var intervalGenMs=intervalGenSecs*1000; //every x milliseconds for typical sensor readings
 var sensorClassArray = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P');
@@ -158,19 +157,7 @@ if (messageBroker==='kafka') {
 
 				ioclient.emit('sensoremit', stringJSON);
 
-
-			    // request({
-		     //        url: "http://153.92.35.73:8125/upload",
-		     //        method: "POST",
-		     //        json: true,   // <--Very important!!!
-		     //        body: data
-		     //    }, function (error, response, body){
-		     //        console.log('kafka data send error:' , error);
-		     //        //console.log('kafka data send, response:',response);
-		     //        console.log('kafka data send body:', body);
-		     //    });
-			
-			
+		
 			if (messageBroker==='kafka') {
 				payloads = [
 		          { topic: 'iot3', messages: stringJSON, partition: 0 }
